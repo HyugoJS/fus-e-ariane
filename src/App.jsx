@@ -54,8 +54,21 @@ function App() {
             </button>
           </div>
         </div>
-        <p>No way !</p>
+        {switch1 && switch2 && switch3 ? (
+          <p style={{ backgroundColor: "green" }}>GO!</p>
+        ) : (
+          <p>No way!</p>
+        )}
       </div>
+      <button
+        onClick={() => {
+          setSwitch1(false);
+          setSwitch2(false);
+          setSwitch3(false);
+        }}
+      >
+        Reset
+      </button>
     </>
   );
 }
